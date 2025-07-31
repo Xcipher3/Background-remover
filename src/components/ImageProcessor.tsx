@@ -97,10 +97,32 @@ export default function ImageProcessor({
     document.body.removeChild(link)
   }
 
-  const handleImageEdited = (editedUrl: string) => {
+  const handleImageEdited = async (editedUrl: string) => {
     setEditedImageUrl(editedUrl)
     setShowEditor(false)
     setActiveTab('download')
+
+    // Save edited image to backend storage
+    try {
+      // Convert URL to blob
+      const response = await fetch(editedUrl)
+      const blob = await response.blob()
+
+      // For now, we'll use a placeholder for the original ID
+      // In a real implementation, you'd track the original image ID
+      const originalId = 'placeholder'
+
+      // Save edited image
+      await api.saveEditedImage(originalId, blob, {
+        edit_type: 'manual_edit',
+        edit_timestamp: new Date().toISOString(),
+        original_filename: image.name
+      })
+
+      console.log('Edited image saved successfully')
+    } catch (error) {
+      console.error('Failed to save edited image:', error)
+    }
   }
 
   const handleReset = () => {

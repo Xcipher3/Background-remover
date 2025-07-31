@@ -2,9 +2,12 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
+import { Images } from 'lucide-react'
 import ImageUploader from '@/components/ImageUploader'
 import ImageProcessor from '@/components/ImageProcessor'
 import Header from '@/components/Header'
+import { Button } from '@/components/ui/Button'
 import { FadeIn, SlideIn } from '@/components/ui/AnimatedContainer'
 
 export default function Home() {
@@ -34,7 +37,15 @@ export default function Home() {
 
   return (
     <main className="container mx-auto px-4 py-8 relative z-10">
-      <Header />
+      <div className="flex items-center justify-between mb-8">
+        <Header />
+        <Link href="/gallery">
+          <Button variant="outline" className="flex items-center gap-2">
+            <Images className="w-4 h-4" />
+            View Gallery
+          </Button>
+        </Link>
+      </div>
 
       <div className="max-w-7xl mx-auto">
         <AnimatePresence mode="wait">

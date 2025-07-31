@@ -25,6 +25,13 @@ A modern, professional-grade web application that removes backgrounds from image
 - **Interactive Tools**: Click and drag to pan, keyboard shortcuts for efficiency
 - **Progress Tracking**: Real-time processing progress with detailed feedback
 
+### 💾 **Persistent Image Storage** ⭐ NEW!
+- **Automatic Storage**: All uploaded and processed images are automatically saved
+- **Image Gallery**: Browse, search, and manage your processed images
+- **Version History**: Track original, processed, and edited versions of each image
+- **Quick Access**: Recent images bar for instant access to your latest work
+- **Smart Organization**: Filter by image type, search by filename, grid/list views
+
 ### 📦 Batch Processing
 - **Multi-Image Upload**: Process dozens of images simultaneously
 - **Queue Management**: Pause, resume, and monitor batch operations
@@ -67,6 +74,17 @@ A modern, professional-grade web application that removes backgrounds from image
 3. **Open your browser** and go to: `http://localhost:3000`
 
 ## 🎯 Usage
+
+### 🖼️ **Image Gallery & Management** ⭐ NEW!
+1. **Access your gallery** by clicking "View Gallery" on the main page
+2. **Browse stored images** with grid or list view options
+3. **Search and filter** images by type (original, processed, edited)
+4. **Quick actions** on each image:
+   - **View**: Open image in full viewer
+   - **Edit**: Re-edit processed images with new filters
+   - **Download**: Save image in various formats
+   - **Delete**: Remove image and its versions
+5. **Recent images bar** for quick access to your latest work
 
 ### Single Image Processing
 1. **Upload an image** by dragging and dropping or clicking to select
