@@ -1,0 +1,3 @@
+@echo off
+echo Starting BG Remover Frontend...
+npm run dev
